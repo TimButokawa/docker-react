@@ -9,6 +9,7 @@ RUN npm run build
 # /app/build <--
 # Run phase
 FROM nginx
+EXPOSE 80
 # copy from builder phase
 # static serve with nginx - see docs
 COPY --from=builder /app/build /usr/share/nginx/html
